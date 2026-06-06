@@ -15,7 +15,7 @@ func TestGetAPIKey(t *testing.T) {
 
 	key, err := GetAPIKey(headers)
 	require.NoError(t, err)
-	assert.Equal(t, key, "fa234bbaff494")
+	assert.Equal(t, key, "fa234bbaff494_G")
 }
 
 func TestGetAPIKey_Fail(t *testing.T) {
