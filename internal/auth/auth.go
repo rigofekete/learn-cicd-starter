@@ -6,9 +6,6 @@ import (
 	"strings"
 )
 
-func unused() {
-}
-
 var ErrNoAuthHeaderIncluded = errors.New("no authorization header included")
 
 // GetAPIKey -
