@@ -36,7 +36,8 @@ func main() {
 	if port == "" {
 		log.Fatal("PORT environment variable is not set")
 	}
-	if _, err := strconv.Atoi(port); err != nil {
+	portNum, err := strconv.Atoi(port)
+	if err != nil {
 		log.Fatal("invalid port")
 	}
 
@@ -99,6 +100,6 @@ func main() {
 		ReadHeaderTimeout: time.Second * 2,
 	}
 
-	log.Printf("Serving on port: %s\n", port)
+	log.Printf("Serving on port: %d\n", portNum)
 	log.Fatal(srv.ListenAndServe())
 }
